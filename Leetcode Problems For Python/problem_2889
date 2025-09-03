@@ -1,0 +1,23 @@
+# to tranform the table use pivot and we can use pivot_table
+import pandas as pd
+
+def pivotTable(weather: pd.DataFrame) -> pd.DataFrame:
+    return weather.pivot(index='month', columns='city', values='temperature')
+
+
+# explaination
+
+# pivot(index='month', columns='city', values='temperature')
+# 📌 Problem Restatement
+
+# You are given a DataFrame called weather with 3 columns:
+
+    # city → name of the city
+    # month → name of the month
+    # temperature → temperature in that city during that month
+
+# Your task: reshape the data so that:
+
+    # Each row = one month
+    # Each column = one city
+    # Each cell = temperature for that city–month pair
